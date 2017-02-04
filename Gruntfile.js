@@ -119,6 +119,12 @@ module.exports = function (grunt) {
                     cwd: 'app/easter',
                     src: ['egg.html'],
                     dest: 'dist/easter',
+                },
+                 {
+                    expand: true,
+                    cwd: 'app',
+                    src: ['favicon.ico'],
+                    dest: 'dist',
                 }]
             }
         },
