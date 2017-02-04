@@ -1,0 +1,29 @@
+{
+  "name": "geeb-art-4",
+  "private": true,
+  "description": "The Portfolio website of Chris \"Geeb\" Smith",
+  "devDependencies": {
+    "btoa": "*",
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-image-embed": "*",
+    "grunt-newer": "*",
+    "grunt-processhtml": "*",
+    "grunt-serve": "*",
+    "jit-grunt": "*",
+    "time-grunt": "*"
+  }
+}
