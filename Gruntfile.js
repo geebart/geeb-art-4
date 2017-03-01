@@ -36,8 +36,8 @@ module.exports = function (grunt) {
                     livereload: true,
                 }
             },
-            index: {
-                files: ['app/index.html'],
+            html: {
+                files: ['app/work/*.html', 'app/index.html', 'app/resume/*.html'],
                 tasks: ['htmlmin'],
                 options: {
                     livereload: true,
