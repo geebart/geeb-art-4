@@ -1,10 +1,2 @@
 {
-    "adName":   "whirlpoolAd",
-    "width":    "320",
-    "height":   "480",
-    "paths": {
-        "output":   "output",
-        "deploy":   "deploy",
-        "temp":     "temp"
-    }
 }

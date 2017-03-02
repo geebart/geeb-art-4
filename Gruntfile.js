@@ -54,15 +54,15 @@ module.exports = function (grunt) {
 
         // Minify JS
         uglify: {
-            dist: {
+            docs: {
                 src: ['app/js/combined.js', '!*jquery.min.js', '!*wurfl.js'],
-                dest: 'dist/js/combined.js'
+                dest: 'docs/js/combined.js'
             }
         },
 
         // Minify CSS
         cssmin: {
-            dist: {
+            docs: {
                 // options: {
                 //     keepSpecialComments: 0,
                 //     roundingPrecision: 10
@@ -71,7 +71,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'app/css',
                     src: ['*.css'],
-                    dest: 'dist/css',
+                    dest: 'docs/css',
                     ext: '.css'
                 }]
             }
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
 
         // Minify HTML
         htmlmin: {
-            dist: {
+            docs: {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true,
@@ -89,42 +89,42 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'app',
                     src: 'index.html',
-                    dest: 'dist',
+                    dest: 'docs',
                 },
                 {
                     expand: true,
                     cwd: 'app/work',
                     src: '*.html',
-                    dest: 'dist/work',
+                    dest: 'docs/work',
                 },
                 {
                     expand: true,
                     cwd: 'app/resume',
                     src: '*.html',
-                    dest: 'dist/resume',
+                    dest: 'docs/resume',
                 }]
             },
         },
 
         copy: {
-            dist: {
+            docs: {
                 files: [{
                     expand: true,
                     cwd: 'app/fonts',
                     src: ['*.ttf', '*.woff', '*.svg', '*.eot'],
-                    dest: 'dist/fonts',
+                    dest: 'docs/fonts',
                 },
                 {
                     expand: true,
                     cwd: 'app/easter',
                     src: ['egg.html'],
-                    dest: 'dist/easter',
+                    dest: 'docs/easter',
                 },
                  {
                     expand: true,
                     cwd: 'app',
                     src: ['favicon.ico'],
-                    dest: 'dist',
+                    dest: 'docs',
                 }]
             }
         },
@@ -137,7 +137,7 @@ module.exports = function (grunt) {
                 keepalive: true,
                 open: true,
                 base: {
-                    path: 'dist',
+                    path: 'docs',
                     options: {
                         index: 'index.html',
                     },
