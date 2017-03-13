@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                 }
             },
             html: {
-                files: ['app/work/*.html', 'app/index.html', 'app/resume/*.html'],
+                files: ['app/work/*.html', 'app/index.html', 'app/resume/*.html', 'app/present/*.html'],
                 tasks: ['htmlmin'],
                 options: {
                     livereload: true,
@@ -55,8 +55,13 @@ module.exports = function (grunt) {
         // Minify JS
         uglify: {
             docs: {
-                src: ['app/js/combined.js', '!*jquery.min.js', '!*wurfl.js'],
-                dest: 'docs/js/combined.js'
+              files: [{
+                  expand: true,
+                  cwd: 'app/js',
+                  src: ['*.js'],
+                  dest: 'docs/js',
+                  ext: '.js'
+              }]
             }
         },
 
@@ -102,6 +107,12 @@ module.exports = function (grunt) {
                     cwd: 'app/resume',
                     src: '*.html',
                     dest: 'docs/resume',
+                },
+                {
+                    expand: true,
+                    cwd: 'app/present',
+                    src: '*.html',
+                    dest: 'docs/present',
                 }]
             },
         },
@@ -150,7 +161,7 @@ module.exports = function (grunt) {
 
     // BASICS
     grunt.registerTask('default', ['cssmin', 'uglify', 'htmlmin', 'copy']);
-    
+
     // SPECIAL TASKS
     grunt.registerTask('server', ['connect']);
 
@@ -164,4 +175,3 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
 
 };
-

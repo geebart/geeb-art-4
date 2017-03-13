@@ -3,14 +3,14 @@ jQuery(document).ready(function($){
 
 	// GET HEADER HEIGHT
 	var headerHeight = $('header').outerHeight();
-	
+
 	// CACHED INT VALUE FOR SCROLLING
 	var rememberScroll = 0;
 
 	// MOBILE DETECTION FIRST
 	if(WURFL.is_mobile){$('body').addClass('mobile');}
 	if(WURFL.form_factor == 'Tablet'){$('body').addClass('tablet');}
-	
+
 	// HIDE/SHOW CONTENT DEN
 	if(location.origin.split('.')[0].split('//')[1] == 'den' || location.search.indexOf('dev=true') > -1){
 		$('body').addClass('live den');
@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 	// HIDE/SHOW CONTENT CHI
 	if(location.origin.split('.')[0].split('//')[1] == 'chi'){
 		$('body').addClass('live chi');
-	}	
+	}
 	if(!$('body').hasClass('live')){
 		$('body').html('').append('<p style="text-align:center;font-size:4rem;font-weight:bold;color:#333;margin:6rem 0;text-transform:uppercase;">A new version of geebart.com is on the way!</p>');
 		return false;
@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 
 		if(!offset){
 			offset = 190;
-		} 
+		}
 
 	    var win = $(window);
 
@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
 		}
 	}
 
-	// PLAY RECURSIVE SLIDER 
+	// PLAY RECURSIVE SLIDER
 	var playPersonalities = setInterval(runPersonalities, 3000);
 
 	// LETTERING.JS FOR #DENVER
@@ -136,7 +136,7 @@ jQuery(document).ready(function($){
 
 		// PREVENT CLICK
 		e.preventDefault();
-		
+
 		// SWITCH BASED ON DESTINATION
 		switch($(this).attr('data-scroll')){
 			// SPECIAL CASES FOR SCROLLS TO COMPENSATE FOR STICKY OR NO STICKY
@@ -313,7 +313,7 @@ jQuery(document).ready(function($){
 
 	// LOAD RESUME
 	$(document).on('click', '.resume-link', function(event){
-		
+
 		// PREVENT CLICK
 		event.preventDefault();
 
@@ -432,6 +432,11 @@ jQuery(document).ready(function($){
 				}
 			});
 		});
+
+		$(window).load(function(){
+			$(window).resize();
+		});
+
 		// LOAD JS INJECT EASTER EGG
 		$.get('easter-egg/egg.html', function(data){
 			$body.append(data);
@@ -492,7 +497,7 @@ function resizePlayer(){
 	if(playerHeight < $hero.height()){
 		playerHeight = $hero.height();
 		playerWidth = (1920 * playerHeight) / 1080;
-		leftOffset = ((playerWidth - $hero.width()) / 2) * -1; 
+		leftOffset = ((playerWidth - $hero.width()) / 2) * -1;
 	}
 	$player.width(playerWidth);
 	$player.height(playerHeight);
@@ -503,7 +508,7 @@ function resizePlayer(){
 function onPlayerReady(event){
 	resizePlayer();
 	player.playVideo();
-	
+
 	// MUTE
 	player.mute();
 	// jQuery('#player-volume').removeClass('unmuted');
@@ -517,7 +522,7 @@ function onPlayerStateChange(event) {
 		$('#greet-hero').addClass('active');
 	} else if (event.data === YT.PlayerState.ENDED){
 		// LOOP VIDEO ENDLESSLY
-		player.playVideo(); 
+		player.playVideo();
 	}
 }
 
