@@ -15,6 +15,7 @@ h1{
   margin-top:6vh;
 }
 h2{
+  margin-bottom: 6rem;
   font-size: 3.8rem;
 }
 h4{
@@ -35,11 +36,12 @@ ul{
   list-style: none;
 }
 li{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   list-style: none;
 }
-.filter-sepia{
-  filter: sepia(70%);
+.inline-block{
+  float: none;
+  display: inline-block;
 }
 #illinois-hero{
   background: -webkit-linear-gradient(top,#333 0,#666 100%);
@@ -48,7 +50,12 @@ li{
   background-size: cover;
 }
 #illinois-hero .screen{
-
+  background: rgba(0,0,0,.95);
+  -webkit-transition: all 0.6s ease-out 0s;
+  transition: all 0.6s ease-out 0s;
+}
+#illinois-hero.active .screen{
+  background:  rgba(0,0,0,.7);
 }
 #illinois-hero .map-wrap{
   position: absolute;
@@ -68,18 +75,8 @@ li{
 	font-size: 4rem;
 	min-width: 24rem;
 }
-#illinois-hero i{
-  font-style: normal;
-}
-#illinois-hero span{
-
-}
 #illinois-hero img{
-  width: 20rem;
-}
-#illinois-hero object{
-  position: relative;
-  top: -68vh;
+  padding: 0 2rem;
 }
 #origins{
   background: transparent;
@@ -91,20 +88,27 @@ li{
   float:left;
 }
 #origins .slick-slide{
-  background: #222;
+  background: #333;
   width: 100%;
   height: 100vh;
 }
 #origins .slick-slide[data-slick-index="0"]{
-  background: -webkit-linear-gradient(top,#2c2f89 0,#7db9e8 100%);
-  background: linear-gradient(to bottom,#2c2f89 0,#7db9e8 100%);
+  background: -webkit-linear-gradient(#002992 0,#008ab8 100%);
+  background: linear-gradient(to bottom,#002992 0,#008ab8 100%);
 }
 #origins .slick-slide[data-slick-index="1"]{
   background-image: url(../images/bernie.jpg);
   background-size: cover;
 }
+#origins .slick-slide[data-slick-index="2"]{
+
+}
 #origins .slick-slide[data-slick-index="3"]{
   background-image: url(../images/denver-drew.jpg);
+  background-size: cover;
+}
+#origins .slick-slide[data-slick-index="4"]{
+  background-image: url(../images/denver-photo-02.jpg);
   background-size: cover;
 }
 #origins figure{
@@ -121,9 +125,13 @@ li{
   color: #DDF;
 }
 #ars{
-  background-image: url(../images/project-ars-hero.jpg);
+  /*background-image: url(../images/project-ars-hero.jpg);*/
+  background-image: url(../images/ars-bg.jpg);
   background-size: cover;
   background-position: 50% 50%;
+}
+.table-wrap{
+  background: rgba(0,0,0,0);
 }
 #ars .table-wrap, #philo .table-wrap{
   background: rgba(0,0,0,.1);
@@ -143,9 +151,66 @@ li{
   font-size: 5.8rem;
 }
 #ggw{
+
+}
+#ggw h6{
+  color: #fbaa29;
+}
+#ggw .slick-slide{
+  background: -webkit-linear-gradient(top, #3c0045 0%, #102 100%);
+  background: linear-gradient(to bottom, #3c0045 0%, #102 100%);
+}
+#ggw .slick-slide[data-slick-index="1"] h4{
+  margin-bottom: 6rem;
+}
+#ggw .slick-slide[data-slick-index="0"]{
   background-image: url(../images/project-ggw-hero.jpg);
   background-size: cover;
   background-position: 50% 50%;
+}
+#ggw .slick-slide[data-slick-index="1"]{
+
+}
+#ggw .slick-slide[data-slick-index="2"]{
+
+}
+#ggw .slick-slide[data-slick-index="3"]{
+ background: #FFF;
+}
+#ggw .slick-slide[data-slick-index="3"] h3, #ggw .slick-slide[data-slick-index="3"] h4,
+#ggw .slick-slide[data-slick-index="4"] h3, #ggw .slick-slide[data-slick-index="4"] h4,
+#ggw .slick-slide[data-slick-index="5"] h3, #ggw .slick-slide[data-slick-index="5"] h4{
+  background: transparent;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentcolor;
+  background-clip: border-box;
+  text-fill-color: currentcolor;
+  color: #333;
+}
+#ggw .slick-slide[data-slick-index="3"] h4{
+  margin-bottom: 5rem;
+}
+#ggw .slick-slide[data-slick-index="3"] h6{
+  position: relative;
+  z-index: 99;
+}
+#ggw .slick-slide[data-slick-index="3"] img{
+  margin-top:-5rem;
+}
+#ggw .slick-slide[data-slick-index="3"] .vpw-3 {
+	margin: 0 -6rem;
+  float:none;
+  display: inline-block;
+}
+#ggw .slick-slide[data-slick-index="4"] h4{
+  margin-bottom: 6rem;
+}
+#ggw #browser, #ggw #browser *{
+  overflow: hidden;
+}
+#ggw .slick-slide[data-slick-index="6"]{
+  background: url('../images/project-ars-hero.jpg');
+  background-size: cover;
 }
 #philo{
   background: -webkit-linear-gradient(top, #29d183 0%,#566abf 44%,#8324bf 82%);
@@ -161,6 +226,9 @@ li{
 }
 #game{
   overflow: hidden;
+}
+#game .screen{
+  background: rgba(0,0,0,.8);
 }
 #game h3{
   margin-top:6rem;
@@ -180,12 +248,118 @@ li{
   position: relative;
   top: -7rem;
 }
+#game{
+  background-image: url(../images/denver-map.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
 
-
-
-
+.anim, .slick-anim{
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-out .4s;
+  transition: all 0.6s ease-out .4s;
+}
+.anim-up{
+  -webkit-transform: translateY(2rem);
+  transform: translateY(2rem);
+}
+.anim-down{
+  -webkit-transform: translateY(-2rem);
+  transform: translateY(-2rem);
+}
+.anim-left{
+  -webkit-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+.anim-right{
+  -webkit-transform: translateX(-2rem);
+  transform: translateX(-2rem);
+}
+.anim-left.anim-delay-1{
+  -webkit-transform: translateX(4rem);
+  transform: translateX(4rem);
+}
+.anim-left.anim-delay-2{
+  -webkit-transform: translateX(6rem);
+  transform: translateX(6rem);
+}
+.anim-left.anim-delay-3{
+  -webkit-transform: translateX(8rem);
+  transform: translateX(8rem);
+}
+.anim-left.anim-delay-4{
+  -webkit-transform: translateX(10rem);
+  transform: translateX(10rem);
+}
+.anim-right.anim-delay-1{
+  -webkit-transform: translateX(-4rem);
+  transform: translateX(-4rem);
+}
+.anim-right.anim-delay-2{
+  -webkit-transform: translateX(-6rem);
+  transform: translateX(-6rem);
+}
+.anim-right.anim-delay-3{
+  -webkit-transform: translateX(-8rem);
+  transform: translateX(-8rem);
+}
+.anim-right.anim-delay-4{
+  -webkit-transform: translateX(-10rem);
+  transform: translateX(-10rem);
+}
+.anim-up.anim-delay-1{
+  -webkit-transform: translateY(4rem);
+  transform: translateY(4rem);
+}
+.anim-up.anim-delay-2{
+  -webkit-transform: translateY(6rem);
+  transform: translateY(6rem);
+}
+.anim-up.anim-delay-3{
+  -webkit-transform: translateY(8rem);
+  transform: translateY(8rem);
+}
+.anim-up.anim-delay-4{
+  -webkit-transform: translateY(10rem);
+  transform: translateY(10rem);
+}
+.anim-down.anim-delay-1{
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+.anim-down.anim-delay-2{
+  -webkit-transform: translateY(-6rem);
+  transform: translateY(-6rem);
+}
+.anim-down.anim-delay-3{
+  -webkit-transform: translateY(-8rem);
+  transform: translateY(-8rem);
+}
+.anim-down.anim-delay-4{
+  -webkit-transform: translateY(-10rem);
+  transform: translateY(-10rem);
+}
+.active .anim, .active .slick-active .slick-anim{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
 
 /* Slider */
+.slick-slider .screen{
+  background: rgba(0,0,0,.6);
+  opacity: 1 !important;
+  -webkit-transition: all 1.2s ease-out .2s;
+  transition: all 1.2s ease-out .2s;
+}
+.slick-slider .screen.dark{
+  background: rgba(0,0,0,.9);
+}
+.slick-slider .slick-active .screen{
+  background: rgba(0,0,0,.1);
+}
+.slick-slider .slick-active .screen.dark{
+  background: rgba(0,0,0,.7);
+}
 .slick-slider
 {
   display: block;
@@ -390,6 +564,8 @@ li{
 
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+
+    text-shadow: 0 0 2rem rgba(0,0,0,.35);
 }
 
 .slick-prev
@@ -461,6 +637,8 @@ li{
     padding: 0;
     visibility: visible;
     opacity: 1;
+
+    text-shadow: 0 0 2rem rgba(0,0,0,.25);
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus

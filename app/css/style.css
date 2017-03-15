@@ -24,11 +24,6 @@ line-height: 1;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-
-/* TESTING */
-section, .parallax-mirror{display: none !important; opacity: 0 !important;}
-.den section, .chi section, .den .parallax-mirror, .chi .parallax-mirror{display: block !important; opacity: 1 !important;}
-/* END TESTING */
 /* GEEB'S MEGA RESET */
 *{
 float: left;

@@ -11,19 +11,6 @@ jQuery(document).ready(function($){
 	if(WURFL.is_mobile){$('body').addClass('mobile');}
 	if(WURFL.form_factor == 'Tablet'){$('body').addClass('tablet');}
 
-	// HIDE/SHOW CONTENT DEN
-	if(location.origin.split('.')[0].split('//')[1] == 'den' || location.search.indexOf('dev=true') > -1){
-		$('body').addClass('live den');
-	}
-	// HIDE/SHOW CONTENT CHI
-	if(location.origin.split('.')[0].split('//')[1] == 'chi'){
-		$('body').addClass('live chi');
-	}
-	if(!$('body').hasClass('live')){
-		$('body').html('').append('<p style="text-align:center;font-size:4rem;font-weight:bold;color:#333;margin:6rem 0;text-transform:uppercase;">A new version of geebart.com is on the way!</p>');
-		return false;
-	}
-
 	// VIEWPORT FUNCTION
 	$.fn.isOnScreenWithOffset = function(offset){
 
