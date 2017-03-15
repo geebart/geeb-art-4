@@ -174,39 +174,54 @@ li{
 #ggw .slick-slide[data-slick-index="2"]{
 
 }
-#ggw .slick-slide[data-slick-index="3"]{
+#ggw .slick-slide[data-slick-index="3"],
+#ggw .slick-slide[data-slick-index="4"],
+#ggw .slick-slide[data-slick-index="5"]{
  background: #FFF;
+ overflow: hidden;
 }
-#ggw .slick-slide[data-slick-index="3"] h3, #ggw .slick-slide[data-slick-index="3"] h4,
-#ggw .slick-slide[data-slick-index="4"] h3, #ggw .slick-slide[data-slick-index="4"] h4,
-#ggw .slick-slide[data-slick-index="5"] h3, #ggw .slick-slide[data-slick-index="5"] h4{
+#ggw .slick-slide[data-slick-index="3"] h3,
+#ggw .slick-slide[data-slick-index="4"] h3,
+#ggw .slick-slide[data-slick-index="5"] h3{
+  maring-top: 2rem;
+}
+#ggw .slick-slide[data-slick-index="3"] h3,
+#ggw .slick-slide[data-slick-index="3"] h4,
+#ggw .slick-slide[data-slick-index="4"] h3,
+#ggw .slick-slide[data-slick-index="4"] h4,
+#ggw .slick-slide[data-slick-index="5"] h3,
+#ggw .slick-slide[data-slick-index="5"] h4{
   background: transparent;
   -webkit-background-clip: border-box;
   -webkit-text-fill-color: currentcolor;
   background-clip: border-box;
   text-fill-color: currentcolor;
   color: #333;
-}
-#ggw .slick-slide[data-slick-index="3"] h4{
-  margin-bottom: 5rem;
-}
-#ggw .slick-slide[data-slick-index="3"] h6{
   position: relative;
   z-index: 99;
 }
-#ggw .slick-slide[data-slick-index="3"] img{
-  margin: -11rem;
-  	position: relative;
-  	z-index: -1;
-    	max-width: 60rem;
-      top:4rem;
+#ggw .slick-slide[data-slick-index="3"] h4,
+#ggw .slick-slide[data-slick-index="4"] h4,
+#ggw .slick-slide[data-slick-index="5"] h4{
+  margin-bottom: 5rem;
 }
-#ggw .slick-slide[data-slick-index="3"] .vpw-3 {
+#ggw .slick-slide[data-slick-index="3"] img,
+#ggw .slick-slide[data-slick-index="4"] img,
+#ggw .slick-slide[data-slick-index="5"] img{
+margin: -11rem;
+position: relative;
+z-index: -1;
+max-width: 58rem;
+top:3rem;
+}
+#ggw .slick-slide[data-slick-index="3"] .vpw-3,
+#ggw .slick-slide[data-slick-index="4"] .vpw-3,
+#ggw .slick-slide[data-slick-index="5"] .vpw-3{
 	margin: 0 -6rem;
   float:none;
   display: inline-block;
 }
-#ggw .slick-slide[data-slick-index="4"] h4{
+#ggw .slick-slide[data-slick-index="6"] h4{
   margin-bottom: 6rem;
 }
 #ggw #browser, #ggw #browser *{
