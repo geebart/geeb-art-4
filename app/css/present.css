@@ -41,7 +41,7 @@ li{
 }
 .inline-block{
   float: none;
-  display: inline-block;
+  display: inline-block !important;
 }
 #illinois-hero{
   background: -webkit-linear-gradient(top,#333 0,#666 100%);
@@ -195,7 +195,11 @@ li{
   z-index: 99;
 }
 #ggw .slick-slide[data-slick-index="3"] img{
-  margin-top:-5rem;
+  margin: -11rem;
+  	position: relative;
+  	z-index: -1;
+    	max-width: 60rem;
+      top:4rem;
 }
 #ggw .slick-slide[data-slick-index="3"] .vpw-3 {
 	margin: 0 -6rem;
@@ -213,16 +217,16 @@ li{
   background-size: cover;
 }
 #philo{
-  background: -webkit-linear-gradient(top, #29d183 0%,#566abf 44%,#8324bf 82%);
-  background: linear-gradient(to bottom, #29d183 0%,#566abf 44%,#8324bf 82%);
-  box-shadow: inset 0 0 60rem rgba(0,0,0,1);
+  background: -webkit-linear-gradient(top, #2e2b7c 0%, #a4599a 100%);
+  background: linear-gradient(to bottom, #2e2b7c 0%, #a4599a 100%);
+  box-shadow: 0 0 0;
 }
 #philo .screen {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC);
+	/*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC);*/
 
 }
 #philo h6{
-  color: #DFD;
+  color: #E499DA ;
 }
 #game{
   overflow: hidden;
@@ -250,6 +254,11 @@ li{
 }
 #game{
   background-image: url(../images/denver-map.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#denver-hero{
+  background-image: url(../images/denver-skyline.jpg);
   background-size: cover;
   background-position: 50% 50%;
 }
