@@ -57,17 +57,20 @@ jQuery(document).ready(function($){
 						$slickTrack.children().length > 0 &&
 						$slickTrack.children('.slick-active').index() != $slickTrack.children().length -1
 					){
+						var targetScroll = $currentSection.offset().top;
 						$currentSection.find('.slick-slider').slick('slickNext');
 					} else{
 						var targetScroll = $nextSection.offset().top;
-						$('html, body').animate({
-		        	scrollTop: targetScroll
-		        }, 600);
 
 						// RESTART ALL SLICK SLIDERS // BROKEN!
 						// $('.slick-slider').slick().slickGoTo(1);
 					}
 				}
+
+				$('html, body').animate({
+					scrollTop: targetScroll
+				}, 600);
+
 	    }
 	});
 
