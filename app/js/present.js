@@ -1,6 +1,9 @@
 // DOCUMENT READY
 jQuery(document).ready(function($){
 
+	// $('section').addClass('active');
+	// $('.slider, .slide').addClass('slick-active');
+
 	// VIEWPORT FUNCTION
 	$.fn.isOnScreenWithOffset = function(offset){
 
@@ -61,9 +64,6 @@ jQuery(document).ready(function($){
 						$currentSection.find('.slick-slider').slick('slickNext');
 					} else{
 						var targetScroll = $nextSection.offset().top;
-
-						// RESTART ALL SLICK SLIDERS // BROKEN!
-						// $('.slick-slider').slick().slickGoTo(1);
 					}
 				}
 
@@ -94,7 +94,7 @@ jQuery(document).ready(function($){
       }
     });
 
-		$('section:not(#illinois-hero)').each(function(){
+		$('section:not(#welcome)').each(function(){
 			if($(this).isOnScreenWithOffset()){
 				$(this).addClass('active');
 			} else{
@@ -114,7 +114,7 @@ jQuery(document).ready(function($){
   };
 
   $('.slider').each(function(){
-    $(this).slick(args);
+    //$(this).slick(args);
   });
 
 	// CACHE BODY
@@ -123,8 +123,8 @@ jQuery(document).ready(function($){
 
 	// REVEAL CONTENT
 	setTimeout(function(){
-		console.log('FIRE!');
-		$body.find('#illinois-hero').addClass('active');
+		$body.find('#welcome').addClass('active');
+		$(window).scroll();
 	}, 600);
 
 });
