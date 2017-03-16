@@ -186,17 +186,13 @@ padding: 0;
 #ggw h6{
   color: #fbaa29;
 }
-#ggw .large{
+h6.large{
 font-size: 3.4rem;
 vertical-align: bottom;
 margin-bottom: 0;
 }
-#ggw .large .icon{
+h6.large .icon{
   color:#FFF;
-}
-#ggw .slick-slide{
-  background: -webkit-linear-gradient(top, #3c0045 0%, #102 100%);
-  background: linear-gradient(to bottom, #3c0045 0%, #102 100%);
 }
 #ggw-title-slide{
   background-image: url(../images/project-ggw-hero.jpg);
@@ -275,17 +271,15 @@ section.white-bg .vpw-3{
   color: #E499DA ;
 }
 #game{
+  padding-top: 6rem;
   overflow: hidden;
-}
-#game .screen{
-  background: rgba(0,0,0,.8);
 }
 #game h3{
   margin-top:6rem;
 }
 #game img{
   position: relative;
-	top: 4rem;
+	top: 1rem;
 	margin-bottom: -24rem;
 	max-width: 32rem;
 }
