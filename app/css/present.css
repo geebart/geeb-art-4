@@ -320,6 +320,9 @@ section.white-bg .vpw-3{
 #success-slide{
   background:#000;
 }
+#welcome h1{
+  margin-bottom: 6rem;
+}
 
 .anim, .slick-anim{
   opacity: 0;
