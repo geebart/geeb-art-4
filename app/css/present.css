@@ -302,6 +302,9 @@ section.white-bg .vpw-3{
   background-size: cover;
   background-position: 50% 50%;
 }
+#origins-denver-1.active .screen, #origins-bernie.active .screen{
+  background: transparent;
+}
 #ggw-strategy-slide{
   box-shadow: 0 0;
   background:-webkit-linear-gradient(to bottom,#002992 0,#008ab8 100%);
@@ -322,6 +325,19 @@ section.white-bg .vpw-3{
 }
 #welcome h1{
   margin-bottom: 6rem;
+}
+#ars-clients{
+  box-shadow: 0 0 0;
+  background: url(../images/ars-logos.png);
+  background-size:cover;
+  background-position: 50% 50%;
+}
+#browser{
+position: relative;
+top: 2rem;
+}
+#game h4{
+  margin-bottom: 8rem;
 }
 
 .anim, .slick-anim{

@@ -75,8 +75,8 @@ jQuery(document).ready(function($){
 	});
 
 	// MOBILE DETECTION FIRST
-	if(WURFL.is_mobile){$('body').addClass('mobile');}
-	if(WURFL.form_factor == 'Tablet'){$('body').addClass('tablet');}
+	// if(WURFL.is_mobile){$('body').addClass('mobile');}
+	// if(WURFL.form_factor == 'Tablet'){$('body').addClass('tablet');}
 
   // LAZY LOAD ON SCROLL
   $(window).scroll(function(){
